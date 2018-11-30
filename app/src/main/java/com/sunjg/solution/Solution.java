@@ -31,8 +31,8 @@ public class Solution {
 //      }
 //      System.out.println();
 //    }
-    int[] preorder = new int[]{1, 2};
-    int[] inorder = new int[]{2, 1};
+    int[] preorder = new int[]{1, 2 };
+    int[] inorder = new int[]{1 , 2};
     print(new BuildTree().buildTree(preorder , inorder));
 //
 //    A.left = B;

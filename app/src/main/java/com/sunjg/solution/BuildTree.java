@@ -26,13 +26,13 @@ public class BuildTree {
     System.out.println(prestart + "|" + preend + "|" + instart + "|" + inend);
     int inRootIndex = find(inorder , preorder[prestart]);
     int inLeftStart = instart;
-    int inLeftEnd = inRootIndex - 1 >= instart ? inRootIndex - 1 : instart;
-    int inRightStart = inRootIndex + 1 <= inend ? inRootIndex + 1 : inend;
+    int inLeftEnd = inRootIndex - 1;
+    int inRightStart = inRootIndex + 1;
     int inRightEnd = inend;
 
-    int preLeftStart = prestart + 1 <= preend ? prestart + 1 : preend;
-    int preLeftEnd = preLeftStart + (inLeftEnd - inLeftStart) <= preend ? preLeftStart + (inLeftEnd - inLeftStart): preLeftStart;
-    int preRightStart = preLeftEnd + 1 <= preend ? preLeftEnd + 1 : preend;
+    int preLeftStart = prestart + 1;
+    int preLeftEnd = preLeftStart + (inLeftEnd - inLeftStart);
+    int preRightStart = preLeftEnd + 1;
     int preRightEnd = preend;
     TreeNode root = new TreeNode(preorder[prestart]);
     root.left = buildTree(preorder , inorder , preLeftStart , preLeftEnd , inLeftStart , inLeftEnd);
