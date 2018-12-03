@@ -14,6 +14,7 @@ import java.util.List;
  */
 public class Solution {
   public static void main(String[] args){
+
     //二叉树的最小公共祖先
 //    TreeNode A = new TreeNode(3);
 //    TreeNode B = new TreeNode(9);
@@ -31,9 +32,12 @@ public class Solution {
 //      }
 //      System.out.println();
 //    }
-    int[] preorder = new int[]{1, 2 };
-    int[] inorder = new int[]{1 , 2};
-    print(new BuildTree().buildTree(preorder , inorder));
+//    int[] preorder = new int[]{1, 2 };
+//    int[] inorder = new int[]{1, 2};
+//    print(new BuildTree().buildTree(preorder , inorder));
+
+    int x = 1, y = 65000 , z = 32500;
+    System.out.println(new CanMeasureWater().canMeasureWater(x , y , z));
 //
 //    A.left = B;
 //    B.left = D;
